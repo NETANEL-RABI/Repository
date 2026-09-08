@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "עוזר AI צף",
+  "version": "1.0",
+  "description": "חלון AI צף שמנתח את תוכן הדף",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
